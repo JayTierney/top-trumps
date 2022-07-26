@@ -32,14 +32,15 @@ p{
 }
 
 #player-layout{
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     margin: 0rem 20rem;
 }
 
-#player{
+#p1{
     border: 5px solid teal;
     text-decoration: underline black;
-    display: inline-block;
     vertical-align: left;
     border-radius: .30cm;
     height: 34rem;
@@ -47,16 +48,28 @@ p{
     box-shadow: 5px 5px 5px aqua;
 }
 
-#computer{
+#p1score{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+}
+
+
+#p2{
     border: 5px solid aqua;   
     text-decoration: underline black;
-    display: inline-block;
     vertical-align: right;
     border-radius: .30cm;
     height: 34rem;
     width: 22.75rem;
     box-shadow: 5px 5px 5px darkgoldenrod;
 }
+
+/* #p2score{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+} */
 
 #button-container{
     margin: 0rem 21rem;

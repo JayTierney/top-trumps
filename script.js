@@ -5,19 +5,20 @@ const specialAttackBtn = document.getElementById("Special-Attack-btn");
 const specialDefencebtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
 
-// let msgDisplay = document.getElementById("message-display");
-
 // display player card and computer cards
 
 let p1ScoreDisplay = document.getElementById("p1score");
 let computerScoreDisplay = document.getElementById("p2score");
 
 let p1CardDisplay = document.getElementById("p1-card-pic");
-let computerCardDisplay = document.getElementById("p2-card-pic");
+let cpuCardDisplay = document.getElementById("p2-card-pic");
 
 // Player cards
 let p1Cards = [];
 let p2Cards = [];
+
+let selectedCards = []
+
 
 // Player 1 & 2 score 
 let p1Score = 0; 
@@ -27,45 +28,6 @@ let p2Score = 0;
 let p1Current = [];
 let p2Current = [];
 // assign 15 card per player
-
-function shuffle() {
-    let deckLength  = pokedex.length;
-    let p1CardCount = 0;
-    let p2CardCount = 0;
-
-    while(--deckLength > 0) {
-        let pokemonID = Math.floor(Math.random() * (deckLength +1));
-        let randomisedCard = pokedex.splice(pokemonID, 1);
-        // Used for debugging purposes
-        console.log(randomisedCard);
-
-        if(p1CardCount > p2CardCount) {
-            p2Cards.push(randomisedCard[0]);
-            p2CardCount +=1;
-        } else if(p1CardCount == p2CardCount) {
-            p1Cards.push(randomisedCard[0]);
-            p1CardCount +=1;
-        }
-    }
-}
-
-// Current card function which is going to be called back in the top comparison function
-function currentCard() {
-    // Select a random card from both player's deck
-    let p1 = Math.floor((Math.random()* p1Cards.length));
-    let p2 = Math.floor((Math.random()* p2Cards.length));
-
-    // Put both of the selected cards into play
-    p1Current.push(p1Cards.splice(p1, 1)[0]);
-    p2Current.push(p2Cards.splice(p2, 1)[0]);
-
-    // Used for debugging purposes
-    console.log(p1Current[0]);
-    console.log(p1Current[0]);
-
-    p1CardDisplay.src  = `images/${p1Current[0].img}`;
-    cpuCardDisplay.src = `images/${p2Current[0].img}`;
-}
 
 
 // hide computer data
@@ -82,11 +44,10 @@ function currentCard() {
 
 //when one players card amount is 0 assign the winner
 
-
 /*  objects  */
 
 
-const pokedex = [
+let pokemonList = [
     {   id: 1, 
         name: "Bulbasaur",
         HP: 45, 
@@ -390,3 +351,13 @@ const pokedex = [
       },
 ]
     
+// function giveCards(){
+//     for(let i = 0; i < 30; 1++){
+    let randomCard = pokemonList[Math.floor(Math.random()*pokedex.length)];
+//         selectedCards.push(randomCard);
+//     }
+//     console.log(selectedCards)
+// }
+
+giveCards()
+shuffle()
