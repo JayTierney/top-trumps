@@ -1,0 +1,74 @@
+#title{
+    border: 5px ridge grey;
+    background-image: linear-gradient(to right, #43cea2, #185a9d);
+    display: flex;
+    justify-content: center;
+    text-shadow: 1px 3px 1px blue;
+    color: darkblue;
+    border-radius: .30cm;
+    margin: 0rem 20rem;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline black;
+}
+
+#score-counter{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 0rem 20rem;
+}
+
+#reset-button{
+    margin-left: 43rem;
+    margin-bottom: 1rem;
+}
+
+#reset-button:hover{
+    background-color: green;
+}
+
+#player-layout{
+    text-align: center;
+    margin: 0rem 20rem;
+}
+
+#player{
+    border: 5px solid teal;
+    text-decoration: underline black;
+    display: inline-block;
+    vertical-align: left;
+    border-radius: .30cm;
+    height: 34rem;
+    width: 22.75rem;
+    box-shadow: 5px 5px 5px aqua;
+}
+
+#computer{
+    border: 5px solid aqua;   
+    text-decoration: underline black;
+    display: inline-block;
+    vertical-align: right;
+    border-radius: .30cm;
+    height: 34rem;
+    width: 22.75rem;
+    box-shadow: 5px 5px 5px darkgoldenrod;
+}
+
+
+/* img{
+    height: 200px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+} */
+/* body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(to left, #43cea2, #185a9d);
+	padding: 50px;
+} */
