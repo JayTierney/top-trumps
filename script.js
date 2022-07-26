@@ -369,7 +369,7 @@ const pokedex = [
         img: "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/028.png",
         },
     {   id: 29,
-        name: "Nidoran♀",
+        name: "Nidoran",
         HP: 55,
         Attack: 47,
         Defense: 52,
