@@ -58,6 +58,10 @@ p{
     box-shadow: 5px 5px 5px darkgoldenrod;
 }
 
+#button-container{
+    margin: 0rem 21rem;
+    margin-top: 1rem;
+}
 
 /* img{
     height: 200px;

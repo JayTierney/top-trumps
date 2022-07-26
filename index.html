@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon top Trumps</title>
     <script src="/model/pokedex.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="script.js"  defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-  <!-- <img src="https://i.pinimg.com/736x/85/9e/03/859e0396b1c628832ba6b7c47c4a95b5.jpg" /> -->
+ 
   <h1 id="title">Pokemon Top Trumps</h1>
 
   <p>Be the first to win all of your opponents cards!</p>
 
 <div id="score-counter">
-  <p id="playercard-num">Player cards: 0</p> 
-  <p id="computercard-num">Computer cards: 0</p>
+  <p id="p1score">Player cards: 0</p> 
+  <p id="p2score">Computer cards: 0</p>
 </div>
 
   <button id="reset-button"> Reset </button>
@@ -25,15 +25,29 @@
 <div id="player-layout">
   <div id="player">
     <h1>Player</h1>
+    <img id="p1-card-pic" src="" />
 
 
   </div>
 
   <div id="computer">
     <h1>Computer</h1>
-
+    <img id="p2-card-pic" src="" />
 
   </div>
 </div>
+
+<div id="button-container">
+  <div id='stat-btns'>
+    <button id="HP-btn">HP</button> 
+    <button id="Attack-btn">Attack</button>
+    <button id="Defence-btn">Defence</button>
+    <br>
+    <button id="Special-Attack-btn">Special Attack</button>
+    <button id="Special-Defence-btn">Special Defence</button>
+    <button id="Speed-btn">Speed</button>
+  </div>
+</div>
+
   </body>
 </html>
