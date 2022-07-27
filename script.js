@@ -1,49 +1,3 @@
-const hpBtn = document.getElementById("HP-btn");
-const attackBtn = document.getElementById("Attack-btn");
-const defenceBtn = document.getElementById("Defence-btn");
-const specialAttackBtn = document.getElementById("Special-Attack-btn");
-const specialDefencebtn = document.getElementById("Special-Defence-btn");
-const speedBtn = document.getElementById("Speed-btn");
-
-// display player card and computer cards
-
-let p1ScoreDisplay = document.getElementById("p1score");
-let computerScoreDisplay = document.getElementById("p2score");
-
-let p1CardDisplay = document.getElementById("p1-card-pic");
-let cpuCardDisplay = document.getElementById("p2-card-pic");
-
-// Player cards
-let p1Cards = [];
-let p2Cards = [];
-
-let selectedCards = []
-
-
-// Player 1 & 2 score 
-let p1Score = 0; 
-let p2Score = 0; 
-
-// Current cards in play
-let p1Current = [];
-let p2Current = [];
-// assign 15 card per player
-
-
-// hide computer data
-
-
-//cycle through cards when attriubute is selected
-
-
-//compare selected attribute value 
-
-
-//assign player with the higher value the two card that were used 
-
-
-//when one players card amount is 0 assign the winner
-
 /*  objects  */
 
 
@@ -350,14 +304,95 @@ let pokemonList = [
         img: "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/030.png",
       },
 ]
-    
-// function giveCards(){
-//     for(let i = 0; i < 30; 1++){
-    let randomCard = pokemonList[Math.floor(Math.random()*pokedex.length)];
-//         selectedCards.push(randomCard);
+
+const hpBtn = document.getElementById("HP-btn");
+const attackBtn = document.getElementById("Attack-btn");
+const defenceBtn = document.getElementById("Defence-btn");
+const specialAttackBtn = document.getElementById("Special-Attack-btn");
+const specialDefencebtn = document.getElementById("Special-Defence-btn");
+const speedBtn = document.getElementById("Speed-btn");
+
+// display player card and computer cards
+
+let p1ScoreDisplay = document.getElementById("p1score");
+let computerScoreDisplay = document.getElementById("p2score");
+
+let p1CardDisplay = document.getElementById("p1-card-pic");
+let cpuCardDisplay = document.getElementById("p2-card-pic");
+
+// Player cards
+let p1Cards = [];
+let p2Cards = [];
+
+let selectedCards = []
+let selectedCardsID = []
+
+
+// Player 1 & 2 score 
+let p1Score = 0; 
+let p2Score = 0; 
+
+// Current cards in play
+let p1Current = [];
+let p2Current = [];
+
+
+function getCards(){
+    let randomCard = Math.floor(Math.random() * pokemonList.length);
+    if(selectedCardsID.includes(randomCard)){
+        console.log('duplcate');
+        getCards()
+    } else {
+        let chosenCard = pokemonList[randomCard]
+        selectedCards.push(randomCard);
+        return chosenCard
+    }
+}
+
+
+
+// function getCards(){
+//     for(let i = 0; i < pokemonList.length; i ++){
+//     let randomCard = pokemonList[Math.floor(Math.random()*pokemonList.length)];
+
+//     let isDuplicate = ran.includes(randomCard[0])
+
+//     if(!isDuplicate){
+//     selectedCards.push(randomCard)
 //     }
-//     console.log(selectedCards)
+
+//     for(let j = 0; j < selectedCards.length; j++){
+//         if(p2Cards.length <= p1Cards.length){
+//             p1Cards.push(selectedCards[0])
+//             selectedCards.shift()      
+//         }
+//     }
+// }
 // }
 
-giveCards()
-shuffle()
+
+console.log(selectedCards)
+console.log(p1Cards)
+console.log(p2Cards)
+
+
+// shuffle()
+getCards()
+
+// hide computer data
+
+
+//cycle through cards when attriubute is selected
+
+
+//compare selected attribute value 
+
+
+//assign player with the higher value the two card that were used 
+
+
+//when one players card amount is 0 assign the winner
+
+
+// assign 15 card per player    
+
