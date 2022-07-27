@@ -1,7 +1,7 @@
 /*  objects  */
 
 
-let pokemonList = [
+const pokemonList = [
     {   id: 1, 
         name: "Bulbasaur",
         HP: 45, 
@@ -312,7 +312,6 @@ const specialAttackBtn = document.getElementById("Special-Attack-btn");
 const specialDefencebtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
 
-// display player card and computer cards
 
 let p1ScoreDisplay = document.getElementById("p1score");
 let computerScoreDisplay = document.getElementById("p2score");
@@ -325,7 +324,6 @@ let p1Cards = [];
 let p2Cards = [];
 
 let selectedCards = []
-let selectedCardsID = []
 
 
 // Player 1 & 2 score 
@@ -333,51 +331,40 @@ let p1Score = 0;
 let p2Score = 0; 
 
 // Current cards in play
-let p1Current = [];
-let p2Current = [];
+let p1Current;
+let p2Current;
 
+// assign 15 card per player  
 
-function getCards(){
-    let randomCard = Math.floor(Math.random() * pokemonList.length);
-    if(selectedCardsID.includes(randomCard)){
-        console.log('duplcate');
-        getCards()
-    } else {
-        let chosenCard = pokemonList[randomCard]
-        selectedCards.push(randomCard);
-        return chosenCard
+function shuffle() {
+    let deckLength  = pokemonList.length;
+    let p1CardCount = 0;
+    let p2CardCount = 0;
+
+    while(--deckLength > -1) {
+        let cardIdx = Math.floor(Math.random() * (deckLength +1));
+        let randomisedCard = pokemonList.splice(cardIdx, 1);
+
+        if(p1CardCount > p2CardCount) {
+            p2Cards.push(randomisedCard[0]);
+            p2CardCount +=1;
+        } else if(p1CardCount == p2CardCount) {
+            p1Cards.push(randomisedCard[0]);
+            p1CardCount +=1;
+        }
     }
 }
 
+shuffle()
+
+p1Current = p1Cards.shift();
+p2Current = p2Cards.shift();
+
+console.log(p1Current)
+
+//display the current card player data
 
 
-// function getCards(){
-//     for(let i = 0; i < pokemonList.length; i ++){
-//     let randomCard = pokemonList[Math.floor(Math.random()*pokemonList.length)];
-
-//     let isDuplicate = ran.includes(randomCard[0])
-
-//     if(!isDuplicate){
-//     selectedCards.push(randomCard)
-//     }
-
-//     for(let j = 0; j < selectedCards.length; j++){
-//         if(p2Cards.length <= p1Cards.length){
-//             p1Cards.push(selectedCards[0])
-//             selectedCards.shift()      
-//         }
-//     }
-// }
-// }
-
-
-console.log(selectedCards)
-console.log(p1Cards)
-console.log(p2Cards)
-
-
-// shuffle()
-getCards()
 
 // hide computer data
 
@@ -394,5 +381,5 @@ getCards()
 //when one players card amount is 0 assign the winner
 
 
-// assign 15 card per player    
+
 

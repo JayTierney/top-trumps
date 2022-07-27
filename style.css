@@ -65,27 +65,38 @@ p{
     box-shadow: 5px 5px 5px darkgoldenrod;
 }
 
-/* #p2score{
+#p2score{
     display: flex;
     justify-content: space-around;
     text-align: center;
-} */
+}
 
 #button-container{
     margin: 0rem 21rem;
     margin-top: 1rem;
 }
 
-/* img{
-    height: 200px;
-    width: auto;
+#p1stats{
+    margin-top: 16rem;
+}
+
+.bordered{
     display: flex;
-    justify-content: center;
-} */
-/* body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-image: linear-gradient(to left, #43cea2, #185a9d);
-	padding: 50px;
-} */
+    border: 3px solid black;
+    background-color: green;
+    border-radius: .20cm;
+    margin-top: 10px;
+}
+
+.bordered2{
+    display: flex;
+    border: 3px solid black;
+    background-color: red;
+    border-radius: .30cm;
+    margin-top: 10px;
+}
+
+#p2stats{
+    margin-top: 16rem;
+}
+
