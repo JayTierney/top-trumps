@@ -370,13 +370,12 @@ p1ScoreDisplay.innerHTML = p1StarterScore
 // console.log(p2ScoreDisplay)
 p2ScoreDisplay.innerHTML = p2StarterScore
 
-p1Current = p1Cards.shift();
-p2Current = p2Cards.shift();
+function getCards(){
+    p1Current = p1Cards.shift();
+    p2Current = p2Cards.shift();
+}
 
-
-
-// console.log(p1Current)
-// console.log(p2Current)
+getCards()
 
 //display the current card player data
 
@@ -405,65 +404,120 @@ function p2Stats(){
 }
 p2Stats()
 
-//compare selected attribute value 
+//compare selected attribute value - //assign the winning card and the losing card to the bottoms of the winners deck
+
 
     hpBtn.addEventListener('click', hpStatComp);
         function hpStatComp(){
         if(p1Current.HP > p2Current.HP){
-        console.log('P1 Winner')
+        // console.log('P1 Winner')
+        endOfRound('playerWins')
         } else {
-        console.log('P2 Winner')
+        // console.log('P2 Winner')
+        endOfRound('CPUWins')
         }
     }
 
     attackBtn.addEventListener('click', attackStatComp);
         function attackStatComp(){
         if(p1Current.Attack > p2Current.Attack){
-        console.log('P1 Winner')
+        // console.log('P1 Winner')
+        endOfRound('playerWins')
         } else {
-            console.log('P2 Winner')
+        // console.log('P2 Winner')
+        endOfRound('CPUWins')
         }
     }
 
     defenceBtn.addEventListener('click', defenceStatComp);
         function defenceStatComp(){
         if(p1Current.Defense > p2Current.Defense){
-        console.log('P1 Winner')
+        // console.log('P1 Winner')
+        endOfRound('playerWins')
         } else {
-        console.log('P2 Winner')
+        // console.log('P2 Winner')
         }
 }
 
     spAttackBtn.addEventListener('click', spAttackStatComp);
         function spAttackStatComp(){
         if(p1Current.SpAttack > p2Current.SpAttack){
-        console.log('P1 Winner')
+        // console.log('P1 Winner')
+        endOfRound('playerWins')
         } else {
-        console.log('P2 Winner')
+        // console.log('P2 Winner')
+        endOfRound('CPUWins')
         }
 }
 
     spDefenceBtn.addEventListener('click', spDefenceStatComp);
         function spDefenceStatComp(){
         if(p1Current.SpDefence > p2Current.SpDefence){
-        console.log('P1 Winner')
+        // console.log('P1 Winner')
+        endOfRound('playerWins')
         } else {
-        console.log('P2 Winner')
+        // console.log('P2 Winner')
+        endOfRound('CPUWins')
         }
 }
 
     speedBtn.addEventListener('click', speedStatComp);
         function speedStatComp(){
         if(p1Current.Speed > p2Current.Speed){
-        console.log('P1 Winner')
+        // console.log('P1 Winner')
+        endOfRound('playerWins')
         } else {
-        console.log('P2 Winner')
+        // console.log('P2 Winner')
+        endOfRound('CPUWins')
         }
 }
 
-//assign the winning card and the losing card to the bottoms of the winners deck
+function ScoreChanges(){
+    p1StarterScore = (p1Cards,length + p1Current.length);
+    p1ScoreDisplay.innerText = p1StarterScore;
+    p2StarterScore = (p2Cards.length + p2Current.length);
+    p2ScoreDisplay.innerText = p2StarterScore;
+}
 
-//click - compare - assign winner - 
+
+// function p1ScoreChanges(){
+//     p1StarzterScore += 1
+//     p1ScoreDisplay.innerHTML = p1StarterScore
+//     p2StarterScore--
+//     p2StarterScore.innerHTML = p2StarterScore
+// }
+
+// function p2ScoreChanges(){
+//     p2StarterScore += 1
+//     p2ScoreDisplay.innerHTML = p2StarterScore
+//     p1StarterScore--
+//     p1StarterScore.innerHTML = p1StarterScore
+// }
+
+function endOfRound(outcome){
+    if(outcome === 'playerWins'){
+        console.log('PLAYER WINS')
+        p1Cards.push(p1Current)
+        p1Cards.push(p2Current)
+        getCards()
+        p1Stats()
+        p2Stats()
+        ScoreChanges()
+    } else if (outcome === 'CPUWins'){
+        console.log('CPU WINS')
+        p2Cards.push(p1Current)
+        p2Cards.push(p2Current)
+        getCards()
+        p1Stats()
+        p2Stats()
+        ScoreChanges()
+    }
+}
+
+console.log(p1Cards)
+console.log(p2Cards)
+console.log(p1Current)
+console.log(p2Current)
 
 //cycle through cards when attriubute is selected
 

@@ -43,7 +43,7 @@ p{
     text-decoration: underline black;
     vertical-align: left;
     border-radius: .30cm;
-    height: 34rem;
+    height: 36.5rem;
     width: 22.75rem;
     box-shadow: 5px 5px 5px aqua;
 }
@@ -60,7 +60,7 @@ p{
     text-decoration: underline black;
     vertical-align: right;
     border-radius: .30cm;
-    height: 34rem;
+    height: 36.5rem;
     width: 22.75rem;
     box-shadow: 5px 5px 5px darkgoldenrod;
 }
@@ -76,14 +76,20 @@ p{
     margin-top: 1rem;
 }
 
+.stat-btns{
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    height: 28.5px;
+}
+
 #p1stats{
-    margin-top: 16rem;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
     border: 5px solid rgb(4, 84, 3);
     background-image: linear-gradient(to bottom right, #4EB15D, #72C07D);
     border-radius: .20cm;
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
 }
 
 .bordered{
@@ -91,7 +97,6 @@ p{
     border: 3px solid black;
     background-color: white;
     border-radius: .20cm;
-    margin-top: 10px;
 }
 
 .bordered2{
@@ -103,13 +108,16 @@ p{
 }
 
 #p2stats{
-    margin-top: 16rem;
-    border: 5px solid rgb(93, 1, 1);
-    background-image: linear-gradient(to bottom left, #CC333F, #D65C65);
-    border-radius: .20cm;
-    margin: 50px;
+    border: 5px solid black;
     display: flex;
     flex-direction: column;
+    border: 5px solid rgb(4, 84, 3);
+    background-image: linear-gradient(to bottom right, #4EB15D, #72C07D);
+    border-radius: .20cm;
+}
+
+.stats{
+    margin: .1px;
 }
 
 .pokemon-image{
