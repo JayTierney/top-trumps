@@ -308,12 +308,12 @@ const pokemonList = [
 const hpBtn = document.getElementById("HP-btn");
 const attackBtn = document.getElementById("Attack-btn");
 const defenceBtn = document.getElementById("Defence-btn");
-const specialAttackBtn = document.getElementById("Special-Attack-btn");
-const specialDefencebtn = document.getElementById("Special-Defence-btn");
+const spAttackBtn = document.getElementById("Special-Attack-btn");
+const spDefenceBtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
 
-let p1CardDisplay = document.getElementById("p1-card-pic");
-let cpuCardDisplay = document.getElementById("p2-card-pic");
+
+let msgDisplay = document.getElementById("message-display");
 
 // Player cards
 let p1Cards = [];
@@ -354,8 +354,8 @@ function shuffle() {
             p2StarterScore +=1;
         }
     }
-    console.log(p1StarterScore)
-    console.log(p2StarterScore)
+    // console.log(p1StarterScore)
+    // console.log(p2StarterScore)
 }
 shuffle()
 
@@ -380,31 +380,88 @@ p2Current = p2Cards.shift();
 
 //display the current card player data
 
+let p1CardDisplay = document.getElementById("p1-card-pic");
+let p2CardDisplay = document.getElementById("p2-card-pic");
+
 function p1Stats(){
-document.getElementById('p1hp').innerText = p1Current.HP
-document.getElementById('p1Attack').innerText = p1Current.Attack
-document.getElementById('p1Defence').innerText = p1Current.Defense
-document.getElementById('p1SpAttack').innerText = p1Current.SpAttack
-document.getElementById('p1SpDefence').innerText= p1Current.SpDefence
-document.getElementById('p1Speed').innerText = p1Current.Speed
+    p1CardDisplay.src  = `${p1Current.img}`;
+    document.getElementById('p1hp').innerText = p1Current.HP
+    document.getElementById('p1Attack').innerText = p1Current.Attack
+    document.getElementById('p1Defence').innerText = p1Current.Defense
+    document.getElementById('p1SpAttack').innerText = p1Current.SpAttack
+    document.getElementById('p1SpDefence').innerText= p1Current.SpDefence
+    document.getElementById('p1Speed').innerText = p1Current.Speed
 }
 p1Stats()
 
 function p2Stats(){
-document.getElementById('p2hp').innerText = p2Current.HP
-document.getElementById('p2Attack').innerText = p2Current.Attack
-document.getElementById('p2Defence').innerText = p2Current.Defense
-document.getElementById('p2SpAttack').innerText = p2Current.SpAttack
-document.getElementById('p2SpDefence').innerText= p2Current.SpDefence
-document.getElementById('p2Speed').innerText = p2Current.Speed
+    p2CardDisplay.src  = `${p2Current.img}`;
+    document.getElementById('p2hp').innerText = p2Current.HP
+    document.getElementById('p2Attack').innerText = p2Current.Attack
+    document.getElementById('p2Defence').innerText = p2Current.Defense
+    document.getElementById('p2SpAttack').innerText = p2Current.SpAttack
+    document.getElementById('p2SpDefence').innerText= p2Current.SpDefence
+    document.getElementById('p2Speed').innerText = p2Current.Speed
 }
 p2Stats()
 
+//compare selected attribute value 
 
+    hpBtn.addEventListener('click', hpStatComp);
+        function hpStatComp(){
+        if(p1Current.HP > p2Current.HP){
+        console.log('P1 Winner')
+        } else {
+            console.log('P2 Winner')
+        }
+    }
+
+    attackBtn.addEventListener('click', attackStatComp);
+        function attackStatComp(){
+        if(p1Current.Attack > p2Current.Attack){
+        console.log('P1 Winner')
+        } else {
+            console.log('P2 Winner')
+        }
+    }
+
+    defenceBtn.addEventListener('click', defenceStatComp);
+        function defenceStatComp(){
+        if(p1Current.Defense > p2Current.Defense){
+        console.log('P1 Winner')
+        } else {
+        console.log('P2 Winner')
+        }
+}
+
+    spAttackBtn.addEventListener('click', spAttackStatComp);
+        function spAttackStatComp(){
+        if(p1Current.SpAttack > p2Current.SpAttack){
+        console.log('P1 Winner')
+        } else {
+        console.log('P2 Winner')
+        }
+}
+
+    spDefenceBtn.addEventListener('click', spDefenceStatComp);
+        function spDefenceStatComp(){
+        if(p1Current.SpDefence > p2Current.SpDefence){
+        console.log('P1 Winner')
+        } else {
+        console.log('P2 Winner')
+        }
+}
+
+    speedBtn.addEventListener('click', speedStatComp);
+        function speedStatComp(){
+        if(p1Current.Speed > p2Current.Speed){
+        console.log('P1 Winner')
+        } else {
+        console.log('P2 Winner')
+        }
+}
 //cycle through cards when attriubute is selected
 
-
-//compare selected attribute value 
 
 
 //assign player with the higher value the two card that were used 

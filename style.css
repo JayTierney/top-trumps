@@ -78,12 +78,18 @@ p{
 
 #p1stats{
     margin-top: 16rem;
+    border: 5px solid rgb(4, 84, 3);
+    background-image: linear-gradient(to bottom right, #4EB15D, #72C07D);
+    border-radius: .20cm;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .bordered{
     display: flex;
     border: 3px solid black;
-    background-color: green;
+    background-color: white;
     border-radius: .20cm;
     margin-top: 10px;
 }
@@ -91,12 +97,23 @@ p{
 .bordered2{
     display: flex;
     border: 3px solid black;
-    background-color: red;
+    background-color: white;
     border-radius: .30cm;
     margin-top: 10px;
 }
 
 #p2stats{
     margin-top: 16rem;
+    border: 5px solid rgb(93, 1, 1);
+    background-image: linear-gradient(to bottom left, #CC333F, #D65C65);
+    border-radius: .20cm;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-image{
+    height: 30%;
+    width: 50%;
 }
 
