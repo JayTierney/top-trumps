@@ -111,8 +111,8 @@ p{
     border: 5px solid black;
     display: flex;
     flex-direction: column;
-    border: 5px solid rgb(4, 84, 3);
-    background-image: linear-gradient(to bottom right, #4EB15D, #72C07D);
+    border: 5px solid rgb(93, 1, 1);
+    background-image: linear-gradient(to bottom right, #ea3609, #790804);
     border-radius: .20cm;
 }
 
