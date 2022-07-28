@@ -362,18 +362,13 @@ shuffle()
 let p1ScoreDisplay = document.getElementById("p1score");
 let p2ScoreDisplay = document.getElementById("p2score");
 
-function p1StartingScore(){
-    console.log(p1ScoreDisplay)
-    p1ScoreDisplay.innerHTML = p1StarterScore
-}
-p1StartingScore()
+//display starter score displays
 
-function p2StartingScore(){
-    console.log(p2ScoreDisplay)
-    p2ScoreDisplay.innerHTML = p2StarterScore
-}
-p2StartingScore()
+// console.log(p1ScoreDisplay)
+p1ScoreDisplay.innerHTML = p1StarterScore
 
+// console.log(p2ScoreDisplay)
+p2ScoreDisplay.innerHTML = p2StarterScore
 
 p1Current = p1Cards.shift();
 p2Current = p2Cards.shift();
