@@ -312,10 +312,6 @@ const specialAttackBtn = document.getElementById("Special-Attack-btn");
 const specialDefencebtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
 
-
-let p1ScoreDisplay = document.getElementById("p1score");
-let computerScoreDisplay = document.getElementById("p2score");
-
 let p1CardDisplay = document.getElementById("p1-card-pic");
 let cpuCardDisplay = document.getElementById("p2-card-pic");
 
@@ -336,6 +332,9 @@ let p2Current;
 
 // assign 15 card per player  
 
+let p1StarterScore = 0;
+let p2StarterScore = 0;
+
 function shuffle() {
     let deckLength  = pokemonList.length;
     let p1CardCount = 0;
@@ -348,59 +347,63 @@ function shuffle() {
         if(p1CardCount > p2CardCount) {
             p2Cards.push(randomisedCard[0]);
             p2CardCount +=1;
+            p1StarterScore +=1;
         } else if(p1CardCount == p2CardCount) {
             p1Cards.push(randomisedCard[0]);
             p1CardCount +=1;
+            p2StarterScore +=1;
         }
     }
+    console.log(p1StarterScore)
+    console.log(p2StarterScore)
 }
-
 shuffle()
+
+let p1ScoreDisplay = document.getElementById("p1score");
+let p2ScoreDisplay = document.getElementById("p2score");
+
+function p1StartingScore(){
+    console.log(p1ScoreDisplay)
+    p1ScoreDisplay.innerHTML = p1StarterScore
+}
+p1StartingScore()
+
+function p2StartingScore(){
+    console.log(p2ScoreDisplay)
+    p2ScoreDisplay.innerHTML = p2StarterScore
+}
+p2StartingScore()
+
 
 p1Current = p1Cards.shift();
 p2Current = p2Cards.shift();
 
-console.log(p1Current)
+
+
+// console.log(p1Current)
 // console.log(p2Current)
 
 //display the current card player data
 
-
-
 function p1Stats(){
 document.getElementById('p1hp').innerText = p1Current.HP
-console.log(p1Current.HP)
 document.getElementById('p1Attack').innerText = p1Current.Attack
-console.log(p1Current.Attack)
 document.getElementById('p1Defence').innerText = p1Current.Defense
-console.log(p1Current.Defense)
 document.getElementById('p1SpAttack').innerText = p1Current.SpAttack
-console.log(p1Current.SpAttack)
 document.getElementById('p1SpDefence').innerText= p1Current.SpDefence
-console.log(p1Current.SpDefence)
 document.getElementById('p1Speed').innerText = p1Current.Speed
-console.log(p1Current.Speed)
 }
-
 p1Stats()
 
 function p2Stats(){
-    document.getElementById('p2hp').innerText = p2Current.HP
-    console.log(p2Current.HP)
-    document.getElementById('p2Attack').innerText = p2Current.Attack
-    console.log(p2Current.Attack)
-    document.getElementById('p2Defence').innerText = p2Current.Defense
-    console.log(p2Current.Defense)
-    document.getElementById('p2SpAttack').innerText = p2Current.SpAttack
-    console.log(p2Current.SpAttack)
-    document.getElementById('p2SpDefence').innerText= p2Current.SpDefence
-    console.log(p2Current.SpDefence)
-    document.getElementById('p2Speed').innerText = p2Current.Speed
-    console.log(p2Current.Speed)
-    }
-
+document.getElementById('p2hp').innerText = p2Current.HP
+document.getElementById('p2Attack').innerText = p2Current.Attack
+document.getElementById('p2Defence').innerText = p2Current.Defense
+document.getElementById('p2SpAttack').innerText = p2Current.SpAttack
+document.getElementById('p2SpDefence').innerText= p2Current.SpDefence
+document.getElementById('p2Speed').innerText = p2Current.Speed
+}
 p2Stats()
-// hide computer data
 
 
 //cycle through cards when attriubute is selected
@@ -414,6 +417,8 @@ p2Stats()
 
 //when one players card amount is 0 assign the winner
 
+
+// hide computer data
 
 
 
