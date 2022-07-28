@@ -361,20 +361,45 @@ p1Current = p1Cards.shift();
 p2Current = p2Cards.shift();
 
 console.log(p1Current)
+// console.log(p2Current)
 
 //display the current card player data
 
-function displayP1Data(){
-document.getElementById('p1hp').innerText = p2Current[0].HP
-document.getElementById('p1Attack').innerText = p2Current[0].Attack
-document.getElementById('p1Defence').innerText = p2Current[0].Defense
-document.getElementById('p1SpecialAttack').innerText = p2Current[0].SpAttack
-document.getElementById('p1SpecialDefence').innerText = p2Current[0].SpDefence
-document.getElementById('p1Speed').innerText = p2Current[0].Speed
+
+
+function p1Stats(){
+document.getElementById('p1hp').innerText = p1Current.HP
+console.log(p1Current.HP)
+document.getElementById('p1Attack').innerText = p1Current.Attack
+console.log(p1Current.Attack)
+document.getElementById('p1Defence').innerText = p1Current.Defense
+console.log(p1Current.Defense)
+document.getElementById('p1SpAttack').innerText = p1Current.SpAttack
+console.log(p1Current.SpAttack)
+document.getElementById('p1SpDefence').innerText= p1Current.SpDefence
+console.log(p1Current.SpDefence)
+document.getElementById('p1Speed').innerText = p1Current.Speed
+console.log(p1Current.Speed)
 }
 
-displayP1Data()
+p1Stats()
 
+function p2Stats(){
+    document.getElementById('p2hp').innerText = p2Current.HP
+    console.log(p2Current.HP)
+    document.getElementById('p2Attack').innerText = p2Current.Attack
+    console.log(p2Current.Attack)
+    document.getElementById('p2Defence').innerText = p2Current.Defense
+    console.log(p2Current.Defense)
+    document.getElementById('p2SpAttack').innerText = p2Current.SpAttack
+    console.log(p2Current.SpAttack)
+    document.getElementById('p2SpDefence').innerText= p2Current.SpDefence
+    console.log(p2Current.SpDefence)
+    document.getElementById('p2Speed').innerText = p2Current.Speed
+    console.log(p2Current.Speed)
+    }
+
+p2Stats()
 // hide computer data
 
 
