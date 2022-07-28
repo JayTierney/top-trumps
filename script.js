@@ -374,7 +374,6 @@ function getCards(){
     p1Current = p1Cards.shift();
     p2Current = p2Cards.shift();
 }
-jihg
 
 getCards()
 
