@@ -412,7 +412,7 @@ p2Stats()
         if(p1Current.HP > p2Current.HP){
         console.log('P1 Winner')
         } else {
-            console.log('P2 Winner')
+        console.log('P2 Winner')
         }
     }
 
@@ -460,6 +460,11 @@ p2Stats()
         console.log('P2 Winner')
         }
 }
+
+//assign the winning card and the losing card to the bottoms of the winners deck
+
+//click - compare - assign winner - 
+
 //cycle through cards when attriubute is selected
 
 
