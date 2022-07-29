@@ -471,6 +471,7 @@ p2Stats()
 }
 
 //cycle through cards when attriubute is selected - //assign player with the higher value the two card that were used 
+//when one players card amount is 0 assign the winner
 
 let msgDisplay = document.getElementById("message-display");
 
@@ -524,16 +525,6 @@ function endOfRound(outcome){
 // console.log(p1Current)
 // console.log(p2Current)
 
-
-//when one players card amount is 0 assign the winner
-// function winCondtion(){
-//     if (p2Cards.length === 0 ){
-//         msgDisplay.textContent = "You are the Winner!"
-//     } else if (p1Cards.length === 0)
-//         msgDisplay.textContent = "You lose!"
-// }
-
-// winCondtion()
 // hide computer data
 
 
