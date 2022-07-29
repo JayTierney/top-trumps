@@ -15,6 +15,12 @@ p{
     text-decoration: underline black;
 }
 
+#message-display{
+        display: flex;
+        justify-content: center;
+        text-decoration: underline black;
+}
+
 #score-counter{
     display: flex;
     justify-content: space-around;

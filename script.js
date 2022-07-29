@@ -302,7 +302,7 @@ const pokemonList = [
         SpDefence: 55,
         Speed: 56,
         img: "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/030.png",
-      },
+    },
 ]
 
 const hpBtn = document.getElementById("HP-btn");
@@ -312,8 +312,6 @@ const spAttackBtn = document.getElementById("Special-Attack-btn");
 const spDefenceBtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
 
-
-let msgDisplay = document.getElementById("message-display");
 
 // Player cards
 let p1Cards = [];
@@ -365,10 +363,10 @@ let p2ScoreDisplay = document.getElementById("p2score");
 //display starter score displays
 
 // console.log(p1ScoreDisplay)
-p1ScoreDisplay.innerHTML = p1StarterScore
+p1ScoreDisplay.innerText = p1StarterScore
 
 // console.log(p2ScoreDisplay)
-p2ScoreDisplay.innerHTML = p2StarterScore
+p2ScoreDisplay.innerText = p2StarterScore
 
 function getCards(){
     p1Current = p1Cards.shift();
@@ -472,63 +470,70 @@ p2Stats()
         }
 }
 
-function ScoreChanges(){
-    p1StarterScore = (p1Cards,length + p1Current.length);
-    p1ScoreDisplay.innerText = p1StarterScore;
-    p2StarterScore = (p2Cards.length + p2Current.length);
-    p2ScoreDisplay.innerText = p2StarterScore;
+//cycle through cards when attriubute is selected - //assign player with the higher value the two card that were used 
+
+let msgDisplay = document.getElementById("message-display");
+
+function winCondtion(){
+    if (p2Cards.length === 0 ){
+        msgDisplay.textContent = "You are the Winner!"
+    } else if (p1Cards.length === 0)
+        msgDisplay.textContent = "You lose!"
 }
 
-
-// function p1ScoreChanges(){
-//     p1StarzterScore += 1
-//     p1ScoreDisplay.innerHTML = p1StarterScore
-//     p2StarterScore--
-//     p2StarterScore.innerHTML = p2StarterScore
-// }
-
-// function p2ScoreChanges(){
-//     p2StarterScore += 1
-//     p2ScoreDisplay.innerHTML = p2StarterScore
-//     p1StarterScore--
-//     p1StarterScore.innerHTML = p1StarterScore
-// }
+winCondtion()
 
 function endOfRound(outcome){
     if(outcome === 'playerWins'){
         console.log('PLAYER WINS')
         p1Cards.push(p1Current)
         p1Cards.push(p2Current)
-        getCards()
-        p1Stats()
-        p2Stats()
-        ScoreChanges()
+        p1StarterScore = p1Cards.length;
+        p2StarterScore = p2Cards.length;
+        p1ScoreDisplay.innerText = p1StarterScore
+        p2ScoreDisplay.innerText = p2StarterScore
+        if (p1Cards.length >= 1 && p2Cards.length >= 1){
+            getCards()
+            p1Stats()
+            p2Stats()
+        } else {
+            winCondtion()
+        }
     } else if (outcome === 'CPUWins'){
         console.log('CPU WINS')
         p2Cards.push(p1Current)
         p2Cards.push(p2Current)
-        getCards()
-        p1Stats()
-        p2Stats()
-        ScoreChanges()
+        p1StarterScore = p1Cards.length;
+        p2StarterScore = p2Cards.length;
+        p1ScoreDisplay.innerText = p1StarterScore
+        p2ScoreDisplay.innerText = p2StarterScore
+        if (p1Cards.length >= 1 && p2Cards.length >= 1){
+            getCards()
+            p1Stats()
+            p2Stats()
+        } else {
+            winCondtion()
+        }
     }
 }
 
-console.log(p1Cards)
-console.log(p2Cards)
-console.log(p1Current)
-console.log(p2Current)
-
-//cycle through cards when attriubute is selected
-
-
-
-//assign player with the higher value the two card that were used 
+// console.log(p1StarterScore)
+// console.log(p1StarterScore)
+// console.log(p1Cards)
+// console.log(p2Cards)
+// console.log(p1Current)
+// console.log(p2Current)
 
 
 //when one players card amount is 0 assign the winner
+// function winCondtion(){
+//     if (p2Cards.length === 0 ){
+//         msgDisplay.textContent = "You are the Winner!"
+//     } else if (p1Cards.length === 0)
+//         msgDisplay.textContent = "You lose!"
+// }
 
-
+// winCondtion()
 // hide computer data
 
 
