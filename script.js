@@ -352,8 +352,6 @@ function shuffle() {
             p2StarterScore +=1;
         }
     }
-    // console.log(p1StarterScore)
-    // console.log(p2StarterScore)
 }
 shuffle()
 
@@ -362,10 +360,8 @@ let p2ScoreDisplay = document.getElementById("p2score");
 
 //display starter score displays
 
-// console.log(p1ScoreDisplay)
 p1ScoreDisplay.innerText = p1StarterScore
 
-// console.log(p2ScoreDisplay)
 p2ScoreDisplay.innerText = p2StarterScore
 
 function getCards(){
@@ -408,10 +404,8 @@ p2Stats()
     hpBtn.addEventListener('click', hpStatComp);
         function hpStatComp(){
         if(p1Current.HP > p2Current.HP){
-        // console.log('P1 Winner')
         endOfRound('playerWins')
         } else {
-        // console.log('P2 Winner')
         endOfRound('CPUWins')
         }
     }
@@ -419,10 +413,8 @@ p2Stats()
     attackBtn.addEventListener('click', attackStatComp);
         function attackStatComp(){
         if(p1Current.Attack > p2Current.Attack){
-        // console.log('P1 Winner')
         endOfRound('playerWins')
         } else {
-        // console.log('P2 Winner')
         endOfRound('CPUWins')
         }
     }
@@ -430,20 +422,16 @@ p2Stats()
     defenceBtn.addEventListener('click', defenceStatComp);
         function defenceStatComp(){
         if(p1Current.Defense > p2Current.Defense){
-        // console.log('P1 Winner')
         endOfRound('playerWins')
         } else {
-        // console.log('P2 Winner')
         }
 }
 
     spAttackBtn.addEventListener('click', spAttackStatComp);
         function spAttackStatComp(){
         if(p1Current.SpAttack > p2Current.SpAttack){
-        // console.log('P1 Winner')
         endOfRound('playerWins')
         } else {
-        // console.log('P2 Winner')
         endOfRound('CPUWins')
         }
 }
@@ -451,10 +439,8 @@ p2Stats()
     spDefenceBtn.addEventListener('click', spDefenceStatComp);
         function spDefenceStatComp(){
         if(p1Current.SpDefence > p2Current.SpDefence){
-        // console.log('P1 Winner')
         endOfRound('playerWins')
         } else {
-        // console.log('P2 Winner')
         endOfRound('CPUWins')
         }
 }
@@ -462,10 +448,8 @@ p2Stats()
     speedBtn.addEventListener('click', speedStatComp);
         function speedStatComp(){
         if(p1Current.Speed > p2Current.Speed){
-        // console.log('P1 Winner')
         endOfRound('playerWins')
         } else {
-        // console.log('P2 Winner')
         endOfRound('CPUWins')
         }
 }
@@ -518,12 +502,6 @@ function endOfRound(outcome){
     }
 }
 
-// console.log(p1StarterScore)
-// console.log(p1StarterScore)
-// console.log(p1Cards)
-// console.log(p2Cards)
-// console.log(p1Current)
-// console.log(p2Current)
 
 // hide computer data
 
