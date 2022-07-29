@@ -18,15 +18,17 @@
   <p>Be the first to win all of your opponents cards!</p>
 
 <div id="score-counter">
-  <p id="p1score">Player cards: 0</p> 
-  <p id="p2score">Computer cards: 0</p>
+  <p>player 1 Score:</p>
+  <p id="p1score">0</p> 
+  <p>CPU 1 Score:</p>
+  <p id="p2score">0</p>
 </div>
 
   <button id="reset-button"> Reset </button>
   
 <div id="player-layout">
   <div id="p1">
-    <h1>Player</h1>
+    <h1 id="p1pokemon-name"></h1>
     <img id="p1-card-pic" class="pokemon-image" src="" />
 
   <div id="p1stats">
@@ -47,10 +49,10 @@
   </div>
 
   <div id="p2">
-    <h1>Computer</h1>
+    <h1 id="p2pokemon-name"></h1></h1>
     <img id="p2-card-pic" class="pokemon-image" src="" />
 
-  <div id="p2stats">
+  <div id="p2stats" class="hidden-bits">
     <p class="stats">HP</p>
     <div id="p2hp" class="bordered2">0</div>
     <p class="stats">Attack</p>

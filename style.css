@@ -1,10 +1,15 @@
+body{
+    background-image: url('https://pokemondeal.com/wp-content/uploads/2020/12/Pokeball-wallpaper.jpg');
+    background-size: cover;
+}
+
 #title{
     border: 5px ridge grey;
-    background-image: linear-gradient(to right, #43cea2, #185a9d);
+    background-image: linear-gradient(to right, #4A4E69, #9A8C98);
     display: flex;
     justify-content: center;
-    text-shadow: 1px 3px 1px blue;
-    color: darkblue;
+    text-shadow: 1px 3px 1px #C9ADA7;
+    color: #370617;
     border-radius: .30cm;
     margin: 0rem 20rem;
 }
@@ -13,6 +18,7 @@ p{
     display: flex;
     justify-content: center;
     text-decoration: underline black;
+    /* text-shadow: 1px 3px 1px #52B69A; */
 }
 
 #message-display{
@@ -45,13 +51,20 @@ p{
 }
 
 #p1{
-    border: 5px solid teal;
+    border: 5px solid #99D98C;
     text-decoration: underline black;
     vertical-align: left;
     border-radius: .30cm;
     height: 36.5rem;
     width: 22.75rem;
-    box-shadow: 5px 5px 5px aqua;
+    box-shadow: 5px 5px 5px #52B69A;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bafcbb8b-6adb-4b6b-9e8b-60ed07e17c32/d6aiu5e-337f596a-ae46-496e-9c27-83d4eaca7938.png/v1/fill/w_178,h_250,strp/bug_texture_by_metagross101_d6aiu5e-250t.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTkwIiwicGF0aCI6IlwvZlwvYmFmY2JiOGItNmFkYi00YjZiLTllOGItNjBlZDA3ZTE3YzMyXC9kNmFpdTVlLTMzN2Y1OTZhLWFlNDYtNDk2ZS05YzI3LTgzZDRlYWNhNzkzOC5wbmciLCJ3aWR0aCI6Ijw9NDIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.7vqTNaTnkQcJYCJVm5O5LBjrB9d_N6HSzH1e0FnIbt8");
+    background-size: cover;
+}
+
+#score-counter{
+    display: flex;
+    justify-content: space-around;
 }
 
 #p1score{
@@ -62,13 +75,15 @@ p{
 
 
 #p2{
-    border: 5px solid aqua;   
+    border: 5px solid #F48C06;   
     text-decoration: underline black;
     vertical-align: right;
     border-radius: .30cm;
     height: 36.5rem;
     width: 22.75rem;
-    box-shadow: 5px 5px 5px darkgoldenrod;
+    box-shadow: 5px 5px 5px #FFBA08;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/176622e8-bf4c-4d60-9a64-b75cff245c16/d3n22fk-ca665f8a-9aa5-4508-9132-a0cc7b06c3b8.png/v1/fill/w_174,h_250,q_70,strp/pokemon_tcg_dragon_texture_rip_unofficial_by_ilkcmp_d3n22fk-250t.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjE1IiwicGF0aCI6IlwvZlwvMTc2NjIyZTgtYmY0Yy00ZDYwLTlhNjQtYjc1Y2ZmMjQ1YzE2XC9kM24yMmZrLWNhNjY1ZjhhLTlhYTUtNDUwOC05MTMyLWEwY2M3YjA2YzNiOC5wbmciLCJ3aWR0aCI6Ijw9NDI4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ffjzmk8vl_m_6QSLPi1jKHaz4o2MEDZgCq00SWuVTEA");
+    background-size: cover;
 }
 
 #p2score{
@@ -89,11 +104,13 @@ p{
     height: 28.5px;
 }
 
+.stat-btns:hover{
+    background-color: #99D98C;
+}
+
 #p1stats{
-    border: 5px solid black;
     display: flex;
     flex-direction: column;
-    border: 5px solid rgb(4, 84, 3);
     background-image: linear-gradient(to bottom right, #4EB15D, #72C07D);
     border-radius: .20cm;
 }
@@ -114,12 +131,8 @@ p{
 }
 
 #p2stats{
-    border: 5px solid black;
     display: flex;
     flex-direction: column;
-    border: 5px solid rgb(93, 1, 1);
-    background-image: linear-gradient(to bottom right, #ea3609, #790804);
-    border-radius: .20cm;
 }
 
 .stats{
@@ -131,3 +144,6 @@ p{
     width: 50%;
 }
 
+/* .hidden-bits{
+    visibility: hidden;
+} */

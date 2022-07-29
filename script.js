@@ -361,7 +361,6 @@ let p2ScoreDisplay = document.getElementById("p2score");
 //display starter score displays
 
 p1ScoreDisplay.innerText = p1StarterScore
-
 p2ScoreDisplay.innerText = p2StarterScore
 
 function getCards(){
@@ -378,23 +377,25 @@ let p2CardDisplay = document.getElementById("p2-card-pic");
 
 function p1Stats(){
     p1CardDisplay.src  = `${p1Current.img}`;
-    document.getElementById('p1hp').innerText = p1Current.HP
-    document.getElementById('p1Attack').innerText = p1Current.Attack
-    document.getElementById('p1Defence').innerText = p1Current.Defense
-    document.getElementById('p1SpAttack').innerText = p1Current.SpAttack
-    document.getElementById('p1SpDefence').innerText= p1Current.SpDefence
-    document.getElementById('p1Speed').innerText = p1Current.Speed
+    document.getElementById('p1pokemon-name').innerText = p1Current.name;
+    document.getElementById('p1hp').innerText = p1Current.HP;
+    document.getElementById('p1Attack').innerText = p1Current.Attack;
+    document.getElementById('p1Defence').innerText = p1Current.Defense;
+    document.getElementById('p1SpAttack').innerText = p1Current.SpAttack;
+    document.getElementById('p1SpDefence').innerText= p1Current.SpDefence;
+    document.getElementById('p1Speed').innerText = p1Current.Speed;
 }
 p1Stats()
 
 function p2Stats(){
     p2CardDisplay.src  = `${p2Current.img}`;
-    document.getElementById('p2hp').innerText = p2Current.HP
-    document.getElementById('p2Attack').innerText = p2Current.Attack
-    document.getElementById('p2Defence').innerText = p2Current.Defense
-    document.getElementById('p2SpAttack').innerText = p2Current.SpAttack
-    document.getElementById('p2SpDefence').innerText= p2Current.SpDefence
-    document.getElementById('p2Speed').innerText = p2Current.Speed
+    document.getElementById('p2pokemon-name').innerText = p2Current.name;
+    document.getElementById('p2hp').innerText = p2Current.HP;
+    document.getElementById('p2Attack').innerText = p2Current.Attack;
+    document.getElementById('p2Defence').innerText = p2Current.Defense;
+    document.getElementById('p2SpAttack').innerText = p2Current.SpAttack;
+    document.getElementById('p2SpDefence').innerText= p2Current.SpDefence;
+    document.getElementById('p2Speed').innerText = p2Current.Speed;
 }
 p2Stats()
 
@@ -424,6 +425,7 @@ p2Stats()
         if(p1Current.Defense > p2Current.Defense){
         endOfRound('playerWins')
         } else {
+        endOfRound('CPUWins')
         }
 }
 
