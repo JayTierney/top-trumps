@@ -312,8 +312,6 @@ const spDefenceBtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
 const resetBtn = document.getElementById("reset-button");
 
-
-
 // Player cards
 let p1Cards = [];
 let p2Cards = [];
@@ -341,7 +339,7 @@ function shuffle() {
     while(--deckLength > -1) {
         let cardIdx = Math.floor(Math.random() * (deckLength +1));
         let randomisedCard = pokemonList.splice(cardIdx, 1);
-
+        
         if(p1CardCount > p2CardCount) {
             p2Cards.push(randomisedCard[0]);
             p2CardCount +=1;
