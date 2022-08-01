@@ -1,6 +1,5 @@
 /*  objects  */
 
-
 const pokemonList = [
     {   id: 1, 
         name: "Bulbasaur",
@@ -313,11 +312,6 @@ const spDefenceBtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
 const resetBtn = document.getElementById("reset-button")
 
-// resetBtn.addEventListener(click, restart)
-//     function restart(){
-//     p1CardDisplay.reset()
-//     p2ScoreDisplay.reset()
-// }
 
 
 // Player cards
@@ -406,19 +400,6 @@ function p2Stats(){
 p2Stats()
 
 //compare selected attribute value - //assign the winning card and the losing card to the bottoms of the winners deck
-
-const hiddenName = document.getElementsByClassName('hidden-information')
-const hiddenImage = document.getElementsByClassName('hidden-information')
-
-// function hiddenItems(){
-//     hiddenName.style.visability = ''
-//     hiddenImage.style.visability = ''
-// }
-
-// function settingTime(){
-//     setTimeout(hiddenItems, 4000)
-// }
-
 
     hpBtn.addEventListener('click', hpStatComp);
         function hpStatComp(){
@@ -522,9 +503,3 @@ function endOfRound(outcome){
         }
     }
 }
-
-
-// hide computer data
-
-
-
