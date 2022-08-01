@@ -401,60 +401,79 @@ p2Stats()
 
 //compare selected attribute value - //assign the winning card and the losing card to the bottoms of the winners deck
 
+let hiddenDetails = document.getElementById('p2stats')
+
     hpBtn.addEventListener('click', hpStatComp);
         function hpStatComp(){
+        hiddenDetails.style.visibility = 'visible'
+        setTimeout(function(){
         if(p1Current.HP > p2Current.HP){
         endOfRound('playerWins')
         } else {
         endOfRound('CPUWins')
-        }
-        settingTime()
-    }
+        } console.log(hiddenDetails)
+    }, 2000
+)}
 
     attackBtn.addEventListener('click', attackStatComp);
         function attackStatComp(){
+        hiddenDetails.style.visibility = 'visible'
+        setTimeout(function(){
         if(p1Current.Attack > p2Current.Attack){
         endOfRound('playerWins')
         } else {
         endOfRound('CPUWins')
         }
-    }
+    }, 2000
+)}
 
     defenceBtn.addEventListener('click', defenceStatComp);
         function defenceStatComp(){
+        hiddenDetails.style.visibility = 'visible'
+        setTimeout(function(){
         if(p1Current.Defense > p2Current.Defense){
         endOfRound('playerWins')
         } else {
         endOfRound('CPUWins')
         }
-}
+}, 2000
+)}
 
     spAttackBtn.addEventListener('click', spAttackStatComp);
         function spAttackStatComp(){
+        hiddenDetails.style.visibility = 'visible'
+        setTimeout(function(){
         if(p1Current.SpAttack > p2Current.SpAttack){
         endOfRound('playerWins')
         } else {
         endOfRound('CPUWins')
         }
-}
+}, 2000
+)}
 
     spDefenceBtn.addEventListener('click', spDefenceStatComp);
         function spDefenceStatComp(){
+        hiddenDetails.style.visibility = 'visible'
+        setTimeout(function(){
         if(p1Current.SpDefence > p2Current.SpDefence){
         endOfRound('playerWins')
         } else {
         endOfRound('CPUWins')
         }
-}
+}, 2000
+)}
 
     speedBtn.addEventListener('click', speedStatComp);
         function speedStatComp(){
+        hiddenDetails.style.visibility = 'visible'
+        setTimeout(function(){
         if(p1Current.Speed > p2Current.Speed){
         endOfRound('playerWins')
         } else {
         endOfRound('CPUWins')
         }
-}
+}, 2000
+)}
 
 //cycle through cards when attriubute is selected - //assign player with the higher value the two card that were used 
 //when one players card amount is 0 assign the winner
@@ -483,6 +502,7 @@ function endOfRound(outcome){
             getCards()
             p1Stats()
             p2Stats()
+            hiddenDetails.style.visibility = 'hidden'
         } else {
             winCondtion()
         }
@@ -498,6 +518,7 @@ function endOfRound(outcome){
             getCards()
             p1Stats()
             p2Stats()
+            hiddenDetails.style.visibility = 'hidden'
         } else {
             winCondtion()
         }

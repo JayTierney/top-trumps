@@ -134,6 +134,7 @@ p{
 #p2stats{
     display: flex;
     flex-direction: column;
+    visibility: hidden;
 }
 
 .stats{
@@ -144,7 +145,3 @@ p{
     height: 30%;
     width: 50%;
 }
-
-/* .hidden-information{
-    visibility: hidden;
-} */
