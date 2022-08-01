@@ -106,6 +106,7 @@ p{
 
 .stat-btns:hover{
     background-color: #99D98C;
+    transform: scale(1.03);
 }
 
 #p1stats{
@@ -144,6 +145,6 @@ p{
     width: 50%;
 }
 
-/* .hidden-bits{
+/* .hidden-information{
     visibility: hidden;
 } */

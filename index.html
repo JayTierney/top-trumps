@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
- 
+
   <h1 id="title">Pokemon Top Trumps</h1>
 
   <div><h3 id="message-display"></h3></div>
@@ -18,13 +18,13 @@
   <p>Be the first to win all of your opponents cards!</p>
 
 <div id="score-counter">
-  <p>player 1 Score:</p>
+  <p>Player Score:</p>
   <p id="p1score">0</p> 
   <p>CPU Score:</p>
   <p id="p2score">0</p>
 </div>
 
-  <button id="reset-button"> Reset </button>
+  <!-- <button id="reset-button"> Reset </button> -->
   
 <div id="player-layout">
   <div id="p1">
@@ -49,10 +49,10 @@
   </div>
 
   <div id="p2">
-    <h1 id="p2pokemon-name"></h1></h1>
+    <h1 id="p2pokemon-name" class="hidden-information"></h1></h1>
     <img id="p2-card-pic" class="pokemon-image" src="" />
 
-  <div id="p2stats" class="hidden-bits">
+  <div id="p2stats" class="hidden-information">
     <p class="stats">HP</p>
     <div id="p2hp" class="bordered2">0</div>
     <p class="stats">Attack</p>

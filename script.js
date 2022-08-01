@@ -311,6 +311,13 @@ const defenceBtn = document.getElementById("Defence-btn");
 const spAttackBtn = document.getElementById("Special-Attack-btn");
 const spDefenceBtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
+const resetBtn = document.getElementById("reset-button")
+
+// resetBtn.addEventListener(click, restart)
+//     function restart(){
+//     p1CardDisplay.reset()
+//     p2ScoreDisplay.reset()
+// }
 
 
 // Player cards
@@ -318,7 +325,6 @@ let p1Cards = [];
 let p2Cards = [];
 
 let selectedCards = []
-
 
 // Player 1 & 2 score 
 let p1Score = 0; 
@@ -401,6 +407,18 @@ p2Stats()
 
 //compare selected attribute value - //assign the winning card and the losing card to the bottoms of the winners deck
 
+const hiddenName = document.getElementsByClassName('hidden-information')
+const hiddenImage = document.getElementsByClassName('hidden-information')
+
+// function hiddenItems(){
+//     hiddenName.style.visability = ''
+//     hiddenImage.style.visability = ''
+// }
+
+// function settingTime(){
+//     setTimeout(hiddenItems, 4000)
+// }
+
 
     hpBtn.addEventListener('click', hpStatComp);
         function hpStatComp(){
@@ -409,6 +427,7 @@ p2Stats()
         } else {
         endOfRound('CPUWins')
         }
+        settingTime()
     }
 
     attackBtn.addEventListener('click', attackStatComp);
