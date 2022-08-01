@@ -310,7 +310,7 @@ const defenceBtn = document.getElementById("Defence-btn");
 const spAttackBtn = document.getElementById("Special-Attack-btn");
 const spDefenceBtn = document.getElementById("Special-Defence-btn");
 const speedBtn = document.getElementById("Speed-btn");
-const resetBtn = document.getElementById("reset-button")
+const resetBtn = document.getElementById("reset-button");
 
 
 
@@ -318,7 +318,7 @@ const resetBtn = document.getElementById("reset-button")
 let p1Cards = [];
 let p2Cards = [];
 
-let selectedCards = []
+let selectedCards = [];
 
 // Player 1 & 2 score 
 let p1Score = 0; 
